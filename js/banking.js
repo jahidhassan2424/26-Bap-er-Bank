@@ -1,9 +1,6 @@
 
 const totaWithdraw = document.getElementById('total-withdraw');
 const totalBalance = document.getElementById('total-balance');
-
-
-
 const depositButton = document.getElementById('deposit-button');
 const withdrawInput = document.getElementById('withdraw-input');
 const withdrawAmount = parseInt(withdrawInput.value);

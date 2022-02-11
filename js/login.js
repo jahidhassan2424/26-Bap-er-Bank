@@ -8,7 +8,7 @@ loginSubmitBtn.addEventListener('click', function () {
         window.location.href = 'banking.html';
     }
     else {
-        console.log('Invalid Email or password!');
+        alert('Invalid Email or password!');
     }
 })
 
@@ -29,4 +29,38 @@ document.getElementById('new-customer-btn').addEventListener('click', function (
     document.getElementById('new-customer-form').style.display = 'block';
     document.getElementById('new-customer-btn').style.display = 'none';
     document.getElementById('invalid-popup').style.display = 'none';
+})
+
+const newCustomerInputName = document.getElementById('new-customer-input-name');
+const newCustomerInputaddress = document.getElementById('new-customer-input-address');
+const newCustomerInputmobile = document.getElementById('new-customer-input-mobile');
+const newCustomerInputemail = document.getElementById('new-customer-input-email');
+const newCustomerInputsubmit = document.getElementById('new-customer-input-submit');
+const noNewNotificationIcon = document.getElementById('no-new-notification');
+const newNotificationIcon = document.getElementById('new-notification');
+
+document.getElementById('new-customer-input-submit').addEventListener('click', function () {
+
+    //&& newCustomerInputaddress.value != "" && newCustomerInputmobile.value != ""
+
+
+    // console.log(newCustomerInputName);
+    // if (newCustomerInputmobile.value.length != 11) {
+    //     console.log('Mobile Number must be 11 Digit.');
+    // }
+    if (newCustomerInputName.value != "" && newCustomerInputaddress.value != "") {
+        // newCustomerInputsubmit.removeAttribute('disabled');
+        const page = window.open('banking.html')
+        page.addEventListener('DOMContentLoaded', () => {
+            console.log(newNotificationIcon);
+            // noNewNotificationIcon.setAttribute('disabled', true);
+            newNotificationIcon.removeAttribute('disabled');
+        })
+
+
+    }
+    else {
+        // newCustomerInputsubmit.setAttribute('disabled', true);
+
+    }
 })

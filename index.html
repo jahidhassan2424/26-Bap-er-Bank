@@ -68,31 +68,42 @@
 
         <!-- New Customer Form -->
         <section id="new-customer-form" class="bg-slate-400 w-3/4 mx-auto rounded-xl ">
-            <form action="">
+            <div action="">
 
                 <h1 class="text-5xl text-center font-bold">New Customer</h1>
                 <table class="mx-auto text-3xl ">
 
                     <tr class="">
                         <td class="pl-8 pb-5 pt-16">Name:</td>
-                        <td class="pr-8 pb-5 px-5 pt-16"><Input class="border-2 border-zinc-900 rounded-lg p-3"
-                                placeholder="Enter Your Full Name" required></Input></td>
+                        <td class="pr-8 pb-5 px-5 pt-16"><Input id="new-customer-input-name"
+                                class="border-2 border-zinc-900 rounded-lg p-3"
+                                placeholder="Enter Your Full Name"></Input></td>
                     </tr>
                     <tr>
                         <td class="pl-8 pb-5">Address:</td>
-                        <td class="pr-8 pb-5 px-5"><input class="border-2 border-zinc-900 rounded-lg p-3"
-                                placeholder="Enter Your address" type="text" required></td>
+                        <td class="pr-8 pb-5 px-5"><input id="new-customer-input-address"
+                                class="border-2 border-zinc-900 rounded-lg p-3" placeholder="Enter Your address"
+                                type="text"></td>
                     </tr>
                     <tr>
-                        <td class="pl-8 pb-16">Mobile:</td>
-                        <td class="pr-8 pb-16 px-5"><input id="
-                            mobile-input" class="border-2 border-zinc-900 rounded-lg p-3"
-                                class="border-2 border-dark-900" type="number" placeholder="Enter your mobile no."
-                                required></td>
+                        <td class="pl-8 pb-5">Mobile:</td>
+                        <td class="pr-8 pb-5 px-5"><input id="new-customer-input-mobile"
+                                class="border-2 border-zinc-900 rounded-lg p-3" class="border-2 border-dark-900"
+                                type="number" placeholder="Enter your mobile no."></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-8 pb-16">Email:</td>
+                        <td class="pr-8 pb-16 px-5"><input id="new-customer-input-email"
+                                class="border-2 border-zinc-900 rounded-lg p-3" class="border-2 border-dark-900"
+                                type="number" placeholder="Enter your mobile no."><span>(Optional)</span></td>
                     </tr>
                 </table>
-
-            </form>
+                <div class="text-center">
+                    <button id="new-customer-input-submit"
+                        class="text-4xl bg-blue-600 px-10 py-5 text-white font-bold rounded-lg mb-8"
+                        type="submit">SUBMIT</button>
+                </div>
+            </div>
 
     </main>
 

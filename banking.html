@@ -7,12 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/31759f3638.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <h1 class="text-5xl text-center mt-16">Lets Get some <span class="font-bold text-purple-600">Money!!!</span>
+
         </h1>
+        <div class="container  m-auto flex items-center">
+            <!-- <button class="bg-white font-bold text-3xl text-blue-600  p-6 rounded-xl ">New Entry
+                <span style="font-size: 50px;" class="text-3xl rounded-full text-red-600">*</span></button>
+            </button> -->
+            <span><i id="no-new-notification"
+                    class="fas fa-solid fa-bell text-5xl  rounded-full text-dark p-5 relative">
+                </i>
+
+            </span>
+            <span class="block flex items-center hidden">
+                <p class="inline text-2xl font-bold">New Entry</p>
+                <i id="new-notification"
+                    class="fas fa-solid fa-bell text-5xl  rounded-full text-dark p-5 relative  text-red-600">
+                </i>
+
+            </span>
+
+
+        </div>
     </header>
     <main class=" mt-8 container mx-auto">
 
@@ -61,6 +82,7 @@
         </section>
     </main>
     <script src="js/banking.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
