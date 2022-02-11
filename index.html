@@ -7,25 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bap er Bank</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <script href="https://kit.fontawesome.com/31759f3638.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-16">Welcome to my <span class="font-bold text-purple-600">baap er
-                bank!!!</span></h1>
+        <h1 class="text-5xl text-center mt-16">Welcome to my <span class="font-bold text-blue-500">SHOMAHAR!!!</span>
+
+        </h1>
     </header>
-    <main>
-        <section class="bg-green-100 w-3/4 text-center m-auto mt-16">
-            <h1 class="text-4xl mb-4 border-grey pt-8">Please Login</h1>
+
+    <div class="text-right px-10  ">
+        <!-- Login button  -->
+        <button id="login-btn" onclick="loginFormAppear()"
+            class="bg-blue-300 px-7 py-4 my-10 border-zinc-900 text-right font-bold rounded-lg">Login</button>
+        <!-- New Customer Button button  -->
+        <button id="new-customer-btn" onclick="loginFormAppear()"
+            class="bg-blue-300 px-7 py-4 my-10 border-zinc-900 text-right font-bold rounded-lg hidden">New
+            Customer</button>
+    </div>
+    <main class="container-fluid">
+        <!-- Login Form -->
+        <section id="login-form" class="bg-slate-400 w-3/4 text-center m-auto rounded-lg  " style="display: none;">
+            <h1 class="text-5xl mb-4 font-bold pt-8">Please Login</h1>
             <div>
-                <input id="user-email" class="border-2 m-2 w-1/2 text-4xl" type="text"
+                <input id="user-email" class="p-3 rounded-lg border-2 m-2 w-1/2 text-2xl" type="text"
                     placeholder="Enter You Email"><br>
-                <input id="user-password" class="border-2 m-2 w-1/2 text-4xl" type="password"
+                <input id="user-password" class="p-3 rounded-lg border-2 m-2 w-1/2 text-2xl" type="password"
                     placeholder="Enter Your Password"><br>
-                <button id="login-submit" class="bg-orange-300 py-2 border-3 rounded-md px-16 my-5 font-semibold"
+                <button id="login-submit"
+                    class="p-3 rounded-lg bg-blue-400 py-4 border-3  px-16 my-5 font-semibold text-3xl text-black"
                     type="submit">SUBMIT</button>
             </div>
+            <!-- Wrong Password Popup -->
+
+            <!-- <div id="invalid-popup" class=" text-center " style="position:absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                
+                ">
+
+                <div onclick="document.getElementById('invalid-popup').style.display='none'"
+                    class="bg-red-300 w-3/4  mx-auto rounded-xl  top-0 ">
+
+                    <p class="text-center text-4xl py-20 absoulate text-white ">Invalid Email or password. Only Admin
+                        can
+                        Login!
+                        <span></span>
+                        <span id="close-btn" class="text-right"> X</span>
+                    </p>
+                </div>
+            </div> -->
         </section>
+
+
+        <!-- New Customer Form -->
+        <section id="new-customer-form" class="bg-slate-400 w-3/4 mx-auto rounded-xl ">
+            <form action="">
+
+                <h1 class="text-5xl text-center font-bold">New Customer</h1>
+                <table class="mx-auto text-3xl ">
+
+                    <tr class="">
+                        <td class="pl-8 pb-5 pt-16">Name:</td>
+                        <td class="pr-8 pb-5 px-5 pt-16"><Input class="border-2 border-zinc-900 rounded-lg p-3"
+                                placeholder="Enter Your Full Name" required></Input></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-8 pb-5">Address:</td>
+                        <td class="pr-8 pb-5 px-5"><input class="border-2 border-zinc-900 rounded-lg p-3"
+                                placeholder="Enter Your address" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-8 pb-16">Mobile:</td>
+                        <td class="pr-8 pb-16 px-5"><input id="
+                            mobile-input" class="border-2 border-zinc-900 rounded-lg p-3"
+                                class="border-2 border-dark-900" type="number" placeholder="Enter your mobile no."
+                                required></td>
+                    </tr>
+                </table>
+
+            </form>
+
     </main>
 
     <script src="js/login.js"></script>
